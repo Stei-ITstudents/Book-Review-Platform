@@ -168,14 +168,6 @@ booknook/
   - `rating`: Rating given by the user (1-5)
   - `review_text`: Review text
 
-## Optional Features
-
-- **User Authentication**: Implement user login and registration.
-- **User Profiles**: Allow users to view the books they've reviewed.
-- **Search**: Add search functionality to find books by title or author.
-- **Recommendations**: Suggest similar books based on genre or ratings.
-- **Responsive Design**: Ensure the application is mobile-friendly.
-
 ## Contributing
 
 We welcome contributions! Please fork the repository, create a new branch, and submit a pull request.
