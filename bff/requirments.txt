@@ -1,0 +1,9 @@
+mysql-connector-python==8.3.0
+flask==3.0.3
+sqlalchemy==2.0.32
+requests==2.32.3
+alembic==1.13.2
+werkzeug==3.0.3
+bcrypt==4.2.0
+migrate==0.3.8
+gunicorn==23.0.0
