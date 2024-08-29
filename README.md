@@ -30,7 +30,6 @@ Welcome to **BookNook**, a simple web application that allows users to browse, a
 ## Technologies Used
 
 - **Backend**: Go (Golang) for RESTful API
-- **Frontend**: Python Flask for rendering templates and handling user interactions
 - **Database**: MySQL for storing book and review data
 - **HTML/CSS/JavaScript**: For the frontend UI
 
@@ -76,7 +75,6 @@ booknook/
 ### Prerequisites
 
 - **Go**: Ensure you have Go installed (version 1.16 or later).
-- **Python**: Ensure you have Python installed (version 3.8 or later).
 - **MySQL**: Ensure MySQL is installed and running.
 
 ### Backend Setup (Go API)
@@ -92,8 +90,10 @@ booknook/
    ```
 
 **Set up the database**:
-   - Create a MySQL database.
-   - Update `db.go` with your MySQL connection details.
+```sh
+CREATE DATABASE booknook;
+mysql -u $MYSQL_ROOT_USER -p$MYSQL_ROOT_PASSWORD booknook < sql/schema.sql
+```
 
 **Run the API**:
    ```bash
@@ -101,45 +101,17 @@ booknook/
    ```
    The API will run on `http://localhost:8080`.
 
-### Frontend Setup (Flask)
 
-**Navigate to the `bff/` directory**:
-   ```bash
-   cd booknook/bff
-   ```
-
-**Create a virtual environment**:
-   ```bash
-   python -m venv venv
-   ```
-
-**Activate the virtual environment**:
-   - On macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
-
-**Install Flask dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-**Run the Flask app**:
-   ```bash
-   flask run
-   ```
-   The app will run on `http://localhost:5000`.
-
-### Database Setup
+### Database Development Setup 
 
 **Run the schema script**:
    ```bash
-   mysql -u your_username -p your_database_name < sql/schema.sql
+   mysql -u $MYSQL_ROOT_USER -p$MYSQL_ROOT_PASSWORD booknook < sql/schema.sql
    ```
 
 **(Optional) Seed the database**:
    ```bash
-   mysql -u your_username -p your_database_name < sql/seed.sql
+   mysql -u $MYSQL_ROOT_USER -p$MYSQL_ROOT_PASSWORD booknook < sql/seed.sql
    ```
 
 ## API Endpoints
