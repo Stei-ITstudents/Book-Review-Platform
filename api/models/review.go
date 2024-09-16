@@ -1,9 +1,9 @@
 package models
 
 import (
-	"booknook/api/database"
-	"encoding/json"
 	"net/http"
+	"encoding/json"
+	"github.com/CristyNel/booknook/api/internal/database"
 )
 
 // represents a book review

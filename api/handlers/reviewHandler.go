@@ -1,13 +1,12 @@
 package handlers
 
 import (
-	"booknook/api/models"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
-
 	"github.com/gorilla/mux"
+	"github.com/CristyNel/booknook/api/models"
 )
 
 // handles review creation

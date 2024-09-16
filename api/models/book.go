@@ -1,8 +1,8 @@
 package models
 
 import (
-	"booknook/api/database"
 	"fmt"
+	"github.com/CristyNel/booknook/api/internal/database"
 )
 
 // represents a book entity
