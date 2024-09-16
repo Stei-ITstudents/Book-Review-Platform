@@ -1,8 +1,8 @@
 
 ---
 
-![received_1097514964147756.(jpg?1652351843](https://bookshop-uk-prod-images.storage.googleapis.com/spree/affiliate_profiles/banner_images/10531/original/received_1097514964147756.jpg?1652351843)
-# BookNook - Book Review Platform
+![browser](./api/static/img/http_js_css.png)
+                                                                                                                        # BookNook - Book Review Platform
 
 
 Welcome to **BookNook**, a simple web application that allows users to browse, add, rate, and review books. This platform provides an easy way for users to discover new books, share their thoughts, and see what others have to say.
