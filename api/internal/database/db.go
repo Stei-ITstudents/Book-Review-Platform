@@ -61,7 +61,7 @@ func InitDB() {
 	}
 
 	// ping the database
-	fmt.Println("\033[1;96;1m * * * 📡 Pinging DB...")
+	fmt.Println("\033[1;96;1m * * * 📡 Pinging DB...\033[0m")
 	err = DB.Ping()
 	if err != nil {
 		fmt.Printf("\033[91m	* Error pinging database: %v\033[0m\n", err)

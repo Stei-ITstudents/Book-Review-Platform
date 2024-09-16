@@ -2,8 +2,9 @@
 ---
 
 ![browser](./api/static/img/http_js_css.png)
-                                                                                                                        # BookNook - Book Review Platform
+![terminal](./api/static/img/api_docker.png)
 
+# BookNook - Book Review Platform
 
 Welcome to **BookNook**, a simple web application that allows users to browse, add, rate, and review books. This platform provides an easy way for users to discover new books, share their thoughts, and see what others have to say.
 
