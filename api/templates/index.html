@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookNook - Home</title>
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="main-header__row1">
+        <div>
+          <a class="main-header__brand" title="BookNook" href="/">
+            <picture>
+              <img
+                class="logo"
+                src="../static/img/BookNook_logo.png"
+                alt="BookNook Logo"
+              />
+            </picture>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__items ul--clean">
+            <li class="main-nav__item">
+              <a href="./become-a-book-reviewer.html">For Readers</a>
+            </li>
+            <li class="main-nav__item"><a href="/pricing">Pricing</a></li>
+            <li class="main-nav__item">
+              <a href="/submit-book-for-review">Submit Book</a>
+            </li>
+            <li class="main-nav__item main-nav__menu" id="menu-toggle">
+              <img
+                class="user-icon"
+                src="../static/img/Book.png"
+                alt="Guest Icon"
+              />
+              <span class="user-name">Guest</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Off-Canvas Menu -->
+    <div class="off-canvas-menu" id="off-canvas-menu">
+      <button type="button" class="close" aria-label="Close" id="close-menu">
+        &times;
+      </button>
+      <ul class="off-canvas-menu__items">
+        <li><a href="/login">Login</a></li>
+        <li><a href="/become-a-book-reviewer">Become a Book Reviewer</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/submit-book-for-review">Submit Your Book</a></li>
+        <li><a href="/advanced-reader-copies">Explore Books & ARCs</a></li>
+        <li><a href="/book-reviewer-directory">Book Reviewer Directory</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content: Book Reviews -->
+    <main>
+      <section class="book-reviews">
+        <h1>Book Reviews</h1>
+        <div class="book-grid">
+          <div class="book-item">
+            <a
+              href="https://learnbyexample.github.io/100_page_python_intro/"
+              target="_blank"
+            >
+              <img
+                src="../static/img/Python_intro-100pages.png"
+                alt="Book Cover: 100 Page Python Intro"
+              />
+            </a>
+            <h2>100 Page Python Intro</h2>
+            <p>Author: Sundeep Agrawal</p>
+            <p>
+              Review: A concise and well-explained guide to Python for
+              beginners.
+            </p>
+          </div>
+          <div class="book-item">
+            <a href="https://inventwithpython.com/beyond/" target="_blank">
+              <img
+                src="../static/img/Python_Beyond-the-basic.jpg"
+                alt="Book Cover: Beyond The Basic Stuff With Python"
+              />
+            </a>
+            <h2>Beyond The Basic Stuff With Python</h2>
+            <p>Author: Al Sweigart</p>
+            <p>
+              Review: Covers advanced topics in Python, ideal for intermediate
+              learners.
+            </p>
+          </div>
+          <div class="book-item">
+            <a href="https://goalkicker.com/JavaScriptBook/" target="_blank">
+              <img
+                src="../static/img/JavaScriptGrow.png"
+                alt="Book Cover: Javascript Notes for Professionals"
+              />
+            </a>
+            <h2>Javascript Notes for Professionals</h2>
+            <p>Author: Stack Overflow community</p>
+            <p>
+              Review: A collection of advanced JavaScript concepts for
+              professional development.
+            </p>
+          </div>
+          <div class="book-item">
+            <a
+              href="https://www.programming-books.io/essential/nodejs/"
+              target="_blank"
+            >
+              <img
+                src="../static/img/Esentials_Node-Js.png"
+                alt="Book Cover: Essential Node.js"
+              />
+            </a>
+            <h2>Essential Node.js</h2>
+            <p>Author: Krzysztof Kowalczyk</p>
+            <p>
+              Review: A focused guide to Node.js covering core concepts,
+              asynchronous programming, and practical applications. Ideal for
+              developers wanting to enhance their server-side JavaScript skills.
+            </p>
+          </div>
+          <div class="book-item">
+            <a
+              href="https://adaptivewebdesign.info/1st-edition/"
+              target="_blank"
+            >
+              <img
+                src="../static/img/Adaptive-web-design.jpg"
+                alt="Book Cover: Adaptive Web Design"
+              />
+            </a>
+            <h2>Adaptive Web Design</h2>
+            <p>Author: Aragon Gustafson</p>
+            <p>
+              Review: Explores adaptive design techniques for creating
+              accessible and responsive websites, with practical insights for
+              enhancing user experience across devices.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="../static/js/main.js"></script>
+  </body>
+</html>
