@@ -1,0 +1,53 @@
+#! ./docker-compose.yml
+---
+services:
+  bn_db-service:
+    env_file:
+      - ./.env
+    image: mysql:9.0
+    container_name: bn_db-container
+    networks:
+      - bn-network
+    ports:
+      - 3307:3306
+    volumes:
+      - ./sql/seed.sql:/docker-entrypoint-initdb.d/dump.sql
+      # - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost]
+      interval: 8s
+      timeout: 6s
+      retries: 4
+      start_period: 2s
+    restart: always
+    command: mysqld
+
+  bn_api-service:
+    env_file:
+      - ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: bn_api-image:3.20.2-alpine
+    container_name: bn_api-container
+    ports:
+      - 8080:8080
+    depends_on:
+      bn_db-service:
+        condition: service_healthy
+    networks:
+      - bn-network
+    restart: always
+
+networks:
+  bn-network:
+    # external: true
+    name: bn-network
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
+          gateway: 172.18.0.1
+# volumes:
+#   mysql-data:
+#     name: bn_db-volume

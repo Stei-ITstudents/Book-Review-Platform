@@ -1,0 +1,35 @@
+# curl -s https://registry.hub.docker.com/v2/repositories/library/golang/tags | jq -r '.results[] | .name + " - " + (.last_updated | split("T")[0])'
+FROM golang:1.23.1-alpine AS builder
+
+RUN addgroup -S cristy && adduser -S cristy -G cristy
+USER cristy
+
+WORKDIR /app
+
+COPY .env ./
+
+COPY ./api/go.mod ./api/go.sum ./
+RUN go mod download
+
+COPY ./api/ ./
+
+RUN go build -o main .
+
+# curl -s https://registry.hub.docker.com/v2/repositories/library/alpine/tags | jq -r '.results[] | .name + " - " + (.last_updated | split("T")[0])'
+FROM alpine:3.20.3
+
+RUN addgroup -S cristy && adduser -S cristy -G cristy
+USER cristy
+
+WORKDIR /app
+
+COPY --from=builder /app/ ./
+
+EXPOSE 8080
+
+HEALTHCHECK CMD curl --fail http://localhost:8080/health || exit 1
+
+CMD ["./main"]
+
+# curl -s https://registry.hub.docker.com/v2/repositories/library/mysql/tags  | jq -r '.results[] | .name + " - " + (.last_updated | split("T")[0])'
+# curl -s https://registry.hub.docker.com/v2/repositories/library/python/tags | jq -r '.results[] | .name + " - " + (.last_updated | split("T")[0])'
